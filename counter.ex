@@ -3,15 +3,15 @@ defmodule Counter do
 
   # Client API
   def start_link(initial_count) do
-    GenServer.start_link(__MODULE__, initial_count, name: {:global, __MODULE__})
+    GenServer.start_link(__MODULE__, initial_count, name: {:global, SimonsModule})
   end
 
   def increment() do
-    GenServer.call({:global, __MODULE__}, :increment)
+    GenServer.call({:global, SimonsModule}, :increment)
   end
 
   def get_count() do
-    GenServer.call({:global, __MODULE__}, :get_count)
+    GenServer.call({:global, SimonsModule}, :get_count)
   end
 
   def init(initial_count) do
@@ -25,5 +25,8 @@ defmodule Counter do
   def handle_call(:get_count, _from, count) do
     {:reply, count, count}
   end
-end
 
+  def handle_cast(:boom, _count) do
+    raise "you done did it now"
+  end
+end

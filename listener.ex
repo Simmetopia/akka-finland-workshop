@@ -25,4 +25,3 @@ defmodule Listener do
     {:noreply, state}
   end
 end
-
