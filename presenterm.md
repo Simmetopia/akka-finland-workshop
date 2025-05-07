@@ -384,7 +384,10 @@ end
 <!-- end_slide -->
 
 # Hands-on Workshop
-
+Before we get started:
+You can get help from:
+`github.com/simmetopia/akka-finland-workshop`
+<!-- end_slide -->
 ## Distributed Hello
 
 ```elixir
@@ -495,8 +498,8 @@ end
 - Build a distributed chat application
 - You have your own channel , that other nodes can join
 - Broadcast messages to all connected nodes on publish
-- Receive messages from all nodes on subscribe
 
+<!-- end_slide -->
 # Wrap-up and Q&A
 
 ## Reflections and key takeaways
