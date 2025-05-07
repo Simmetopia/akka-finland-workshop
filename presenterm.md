@@ -454,6 +454,10 @@ end
 - Supervised with a `Supervisor`
 - Observe restarts, show `:recon_trace`
 
+1. Make the supervised counter from before.
+2. Implement extra boom function
+3. Get someone else to crash it
+
 ```elixir
 def handle_cast(:boom, _state) do
   raise "Boom!"
@@ -485,6 +489,13 @@ end
 ```
 
 <!-- end_slide -->
+
+# Last task:
+
+- Build a distributed chat application
+- You have your own channel , that other nodes can join
+- Broadcast messages to all connected nodes on publish
+- Receive messages from all nodes on subscribe
 
 # Wrap-up and Q&A
 
